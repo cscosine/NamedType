@@ -4,7 +4,7 @@
 
 // <-- Cleanup windows include
 
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
 
 #include "NamedType/named_type.hpp"
 

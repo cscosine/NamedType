@@ -2,15 +2,22 @@ cmake_minimum_required(VERSION 3.10)
 
 project(NamedTypeTest CXX)
 
+include(CTest)
+find_package(Catch2 3 REQUIRED CONFIG)
+include(Catch)
+
 set(testSources
-	"main.cpp"
 	"tests.cpp"
-	"catch.hpp"
 )
 
 add_executable(${PROJECT_NAME} ${testSources})
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${NamedType_SOURCE_DIR}/include/")
+
+target_link_libraries(NamedTypeTest
+    PUBLIC
+	Catch2::Catch2WithMain
+)
 
 if(ANDROID)
     # This is a dependency of catch2:
@@ -65,3 +72,5 @@ else()
 endif()
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
+
+catch_discover_tests(NamedTypeTest DISCOVERY_MODE "PRE_TEST")
