@@ -2,5 +2,3 @@ NamedType/*
 .DS_Store
 .vs
 *.user
-
-cmakeUserPath.json
