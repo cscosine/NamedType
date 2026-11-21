@@ -4,7 +4,7 @@
 
 // <-- Cleanup windows include
 
-#include "catch.hpp"
+#include <catch2/catch_all.hpp>
 
 #include "NamedType/named_type.hpp"
 
@@ -27,7 +27,7 @@ decltype(auto) tee(T&& value)
 }
 
 using Meter = fluent::NamedType<unsigned long long, struct MeterParameter, fluent::Addable, fluent::Comparable>;
-constexpr Meter operator"" _meter(unsigned long long value)
+constexpr Meter operator""_meter(unsigned long long value)
 {
     return Meter(value);
 }
