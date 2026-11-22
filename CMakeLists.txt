@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(NamedType VERSION 1.1.0 LANGUAGES CXX)
+project(NamedType VERSION 1.1.1 LANGUAGES CXX)
 
 if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.13")
   cmake_policy(SET CMP0076 NEW)
