@@ -1,6 +1,8 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v1.1.4
+_commit: v1.1.5
 _src_path: /home/sceriani/myWorkspace/cs-project-template
+claude_plugins:
+- cscmake
 description: 'Strong types for C++ (header-only): the cscosine copy of joboccara/NamedType'
 kind: library
 project_name: NamedType
